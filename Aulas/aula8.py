@@ -1,4 +1,5 @@
 #Estrutura de repeticao for
+#Utilizada quando se sabe o numero de repeticoes a serem feitas
 
 for i in range(0, 3):
     print('Oi')
