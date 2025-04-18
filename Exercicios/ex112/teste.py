@@ -2,9 +2,8 @@
 import sys
 sys.path.append('.')  # Adiciona o diretório atual ao path
 
-from utilidades.moeda.__init import *
+from utilidades.moeda import resumo
 from utilidades.dado import ler_dinheiro
 
 preco = ler_dinheiro('Digite o preco: R$')
 resumo(preco, 20, 12)
-
