@@ -1,37 +1,30 @@
 #Reescreva a funcao leiaInt do desafio 104 incluindo agora a possibilidade da digitacao de um numero de tipo invalido. Crie tambem uma funcao leiaFloat com a mesma funcionalidade
 
 def leia_int(msg = ''):
-    valido = False
-    while not valido:
+    while True:
         try:
-            numero_inteiro = input(msg).replace(',', '.').strip()
-            numero_inteiro = int(numero_inteiro)
+            numero_inteiro = int(input(msg))
         except (TypeError, ValueError):
             print('Erro, digite um numero inteiro valido')
+            continue
         except (KeyboardInterrupt):
             print('O usuario preferiu nao digitar os valores')
-            numero_inteiro = 0
-            break
+            return 0
         else:
-            valido = True
-    return numero_inteiro
+            return numero_inteiro
 
 
 def leia_float(msg = ''):
-    valido = False
-    while not valido:
+    while True:
         try:
-            numero_real = input(msg).replace(',' , '.').strip()
-            numero_real = float(numero_real)
+            numero_real = float(input(msg))
         except (ValueError, TypeError):
             print('Erro digite um numero real valido')
         except (KeyboardInterrupt):
             print('O usuario preferiu nao digitar os valores')
-            numero_real = 0
-            break
+            return 0
         else:
-            valido = True
-    return numero_real
+            return numero_real
 
 
 #Programa principal
